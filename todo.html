@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My To Do Web Page</title>
+
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="icon" href="../img/icon/robot/favicon-16x16.png">
+
+    <!-- below: the styling CSS code from bootstrap -->
+    <!--
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    -->
+  </head>
+  <body>
+    <div
+      id="control-panel"
+      class="main-container"
+      style="display: block; max-width: 100%"
+    >
+      <h1>listMe!</h1>
+      <br />
+      <div class="tooltip" style="color: rgb(31, 31, 31)">
+        What's listMe!?
+        <span class="tooltiptext"
+          >listMe! is a light online app where you can create your to-do list on
+          the fly. It starts with some sample tasks which you can clear and
+          replace with your own. Your browser will remember your list for
+          you—even if you have closed the browser or shut down your PC—so you
+          can continue from where you left off!</span
+        >
+      </div>
+      <br />
+      <div class="tooltip" style="color: rgb(31, 31, 31); font-size: xx-small">
+        Compatibility Note<span class="tooltiptext" style="font-size: medium"
+          >listMe! is compatible with cell phones and tablets and will adapt to their screen sizes.</span
+        >
+      </div>
+      <br />
+      <input id="todo-title" type="text" />
+      <input id="date-picker" type="date" />
+      <button id="add-button" class="button" onclick="addToDo()">
+        Add To-Do
+      </button>
+
+      <button id="reset-button" class="button" onclick="resetOnClick()">
+        Reset
+      </button>
+      <button id="clear-button" class="button" onclick="clearOnClick()">
+        Clear List
+      </button>
+      <br />
+      <div class="center">
+        <div id="status-bar"></div>
+      </div>
+    </div>
+    <br />
+    <div id="todo-list">
+      <table id="table" class="table-class"></table>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+  <div id="background" class="blur"></div>
+</html>
